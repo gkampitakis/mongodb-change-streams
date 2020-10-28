@@ -4,7 +4,7 @@
   "description": "Testing change streams feature in mongodb",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "semistandard | snazzy",
     "start": "nodemon index.js"
   },
@@ -34,9 +34,8 @@
       "js"
     ],
     "collectCoverageFrom": [
-      "lib/src/**/*.js",
-      "!lib/src/**/*/index.js",
-      "!lib/src/index.js"
+      "**/*.js",
+      "!**/*/index.js"
     ],
     "coverageThreshold": {
       "global": {
