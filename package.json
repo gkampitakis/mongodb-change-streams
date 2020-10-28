@@ -1,0 +1,50 @@
+{
+  "name": "mongodb-change-streams",
+  "version": "1.0.0",
+  "description": "Testing change streams feature in mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "semistandard | snazzy",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs",
+    "fastify",
+    "mongodb-changes-stream"
+  ],
+  "author": "gkampitakis",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.7.0",
+    "fastify-plugin": "^3.0.0",
+    "mongodb": "^3.6.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "semistandard": "^14.2.3",
+    "snazzy": "^9.0.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "verbose": true,
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.js$",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "lib/src/**/*.js",
+      "!lib/src/**/*/index.js",
+      "!lib/src/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}
