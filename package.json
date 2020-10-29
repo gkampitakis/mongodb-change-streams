@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "semistandard | snazzy",
-    "start": "nodemon index.js"
+    "start:server": "nodemon index.js",
+    "start:listener": "nodemon listener.js"
   },
   "keywords": [
     "mongodb",
@@ -35,6 +36,7 @@
     ],
     "collectCoverageFrom": [
       "**/*.js",
+      "!server.js",
       "!**/*/index.js"
     ],
     "coverageThreshold": {

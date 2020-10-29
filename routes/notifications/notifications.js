@@ -1,6 +1,6 @@
 'use strict';
 
-const { ObjectID } = require('mongodb')
+const { ObjectID } = require('mongodb');
 
 async function create (fastify, req, res) {
   const payload = {
@@ -25,7 +25,6 @@ function retrieveAll (fastify, req, res) {
   return fastify.mongodb.collection('notifications')
     .find().toArray();
 }
-
 
 async function update (fastify, req, res) {
   const _id = getObjectId(req);

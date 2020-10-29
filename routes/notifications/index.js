@@ -10,4 +10,4 @@ module.exports = (fastify, options, done) => {
   fastify.delete('/:id', (req, res) => _delete(fastify, req, res));
 
   done();
-}
+};
