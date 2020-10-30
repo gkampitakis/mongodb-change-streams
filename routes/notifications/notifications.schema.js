@@ -23,7 +23,10 @@ const retrieveSchema = {
   params: {
     type: 'object',
     properties: {
-      id: { type: 'string' }
+      id: {
+        type: 'string',
+        minLength: 1,
+      }
     },
     required: ['id']
   },
@@ -72,7 +75,10 @@ const updateSchema = {
   params: {
     type: 'object',
     properties: {
-      id: { type: 'string' }
+      id: {
+        type: 'string',
+        minLength: 1
+      }
     },
     required: ['id']
   },
@@ -91,7 +97,10 @@ const _deleteSchema = {
   params: {
     type: 'object',
     properties: {
-      id: { type: 'string' }
+      id: {
+        type: 'string',
+        minLength: 1
+      }
     },
     required: ['id']
   },
