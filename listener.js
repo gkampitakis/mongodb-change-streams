@@ -12,6 +12,8 @@ async function main () {
     const db = client.db('change-streams');
     const changeStream = db.collection('notifications').watch();
 
+    console.log('👂 Listening on changes');
+
     while (await changeStream.hasNext()) {
       const event = await changeStream.next();
 

@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "a8cdb4d8-ba0e-4655-878b-f1e85fcc36be",
+		"name": "mongo-change-streams",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Hello World\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/notification",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Notification",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/notification/{{notificaitonId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"notification",
+						"{{notificaitonId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Notification",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"New Message\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/notification/{{notificaitonId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"notification",
+						"{{notificaitonId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Notification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/notification/{{notificaitonId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"notification",
+						"{{notificaitonId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve all Notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/notification/all",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"notification",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

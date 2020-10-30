@@ -4,7 +4,6 @@
   "description": "Testing change streams feature in mongodb",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "lint": "semistandard | snazzy",
     "start:server": "nodemon index.js",
     "start:listener": "nodemon listener.js"
@@ -23,29 +22,7 @@
     "mongodb": "^3.6.2"
   },
   "devDependencies": {
-    "jest": "^26.6.1",
     "semistandard": "^14.2.3",
     "snazzy": "^9.0.0"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "verbose": true,
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.js$",
-    "moduleFileExtensions": [
-      "js"
-    ],
-    "collectCoverageFrom": [
-      "**/*.js",
-      "!server.js",
-      "!**/*/index.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    }
   }
 }
