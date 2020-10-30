@@ -14,11 +14,15 @@ async function create (fastify, req, res) {
   return payload;
 }
 
-function retrieve (fastify, req, res) {
+async function retrieve (fastify, req, res) {
   const _id = getObjectId(req);
 
-  return fastify.mongodb.collection('notifications')
+  const doc = await fastify.mongodb.collection('notifications')
     .findOne({ _id });
+
+  if (!doc) return res.status(404).send('Notification not found');
+
+  return doc;
 }
 
 function retrieveAll (fastify, req, res) {
