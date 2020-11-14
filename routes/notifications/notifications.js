@@ -58,7 +58,7 @@ function getObjectId (req) {
   const { id } = req.params;
 
   try {
-    return ObjectID(id);
+    return new ObjectID(id);
   } catch (error) {
     throw new Error('Invalid id provided');
   }
