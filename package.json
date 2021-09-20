@@ -19,7 +19,7 @@
   "dependencies": {
     "fastify": "^3.8.0",
     "fastify-plugin": "^3.0.0",
-    "mongodb": "^3.6.3"
+    "mongodb": "^4.1.2"
   },
   "devDependencies": {
     "semistandard": "^16.0.0",
